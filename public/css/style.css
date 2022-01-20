@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif!important;
+}
+body{
+    background: url('/img/bg.png') no-repeat center, radial-gradient(97.91% 60.14% at 50% 50%, #FFDB7E 0%, #FF7A00 100%);
+}
+.wrap{
+    margin: 0 auto;
+}
+.navbar{
+    height: 107.82px;
+    color: white;
+    background-color: #ED7200;
+    box-shadow: 0px 4px 35px rgb(162, 58, 0, 0.75);
+}
+.navbar-brand{
+    position: relative;
+    left: 201px;
+}
+.nav-item{
+    margin: 0 50px;
+}
+.nav-link{
+    color: white!important;
+}
+.navbar-text{
+    position: relative;
+    right: 331.5px;
+}
+.active{
+    border: 2px solid white;
+    font-weight: bold;
+    border-radius: 33px;
+}
+main{
+    height: 100vh;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 27px rgba(180, 106, 38, 0.25);
+}
+.formGen{
+    background-color: #FFF6D4;
+    border-radius: 20px;
+}
+.content{
+    height: 100%;
+    border: 3px dashed #FFB489;
+    border-radius: 20px;
+}
+.formDatVe{
+    background-color: #FFF6D4;
+    border-radius: 20px;
+    width: 600px;
+}
+.formDatVe input, .formLienHe input, .formLienHe textarea{
+    border: none;
+    box-shadow: inset -1px 3px 3px rgba(179, 91, 11, 0.5);
+    border-radius: 15px;
+    padding: 12px;
+}
+.form-control:focus{
+    color: unset!important;
+    box-shadow: none!important;
+}
+.price{
+    color: #FA7D09;
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 48px;
+}
+p.text-muted{
+    margin: 0;
+}
+
+.info{
+    max-width: 450px;
+}
+
+.info .box{
+    max-width: 560px;
+    background-color: #FFF6D4;
+    padding: 5px 17px;
+    margin-bottom: 4rem;
+    border-radius: 30px;
+}
+.info .box .box-with-dashed{
+    padding: 1rem;
+    border: 3px dashed #FFB489;
+    border-radius: 30px;
+}
