@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\sukien;
 
 class HomeController extends Controller
 {
@@ -12,7 +15,10 @@ class HomeController extends Controller
         return view('index');
     }
     public function sukien(){
-        return view('sukien');
+        $sukien = DB::table('event')
+                    ->select('id','images','title','location','fromDate','toDate','price')
+                    ->get();
+        return view('sukien', compact('sukien'));
     }
     public function lienhe(){
         return view('lienhe');
@@ -27,5 +33,10 @@ class HomeController extends Controller
         ];
         Mail::to('taintp21@gmail.com')->send(new ContactMail($data));
         return redirect()->back()->with('message', 'Gửi liên hệ thành công.<br> Vui lòng kiên nhẫn đợi phản hồi từ chúng tôi, bạn nhé!');
+    }
+
+    public function chitiet_sukien($id){
+        $chitiet_sukien = sukien::find($id);
+        return view('chitiet_sukien', compact('chitiet_sukien','id'));
     }
 }

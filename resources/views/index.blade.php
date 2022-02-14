@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title') Trang chủ @endsection
+
 @section('content')
 <div class="container">
     <div class="card border-0 text-white bg-transparent mb-5" style="max-width: 540px;">

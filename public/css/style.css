@@ -9,6 +9,9 @@ body{
 .wrap{
     margin: 0 auto;
 }
+img{
+    border-radius: 10px;
+}
 .navbar{
     height: 107.82px;
     color: white;
@@ -49,6 +52,17 @@ main{
     border: 3px dashed #FFB489;
     border-radius: 20px;
 }
+.event_content{
+    column-count: 3;
+    column-gap: 30px;
+}
+
+.event_content img{
+    width: 288px;
+    height: 208px;
+    margin-bottom: 20px;
+}
+
 .formDatVe{
     background-color: #FFF6D4;
     border-radius: 20px;
