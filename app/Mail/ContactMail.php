@@ -29,7 +29,7 @@ class ContactMail extends Mailable
     public function build()
     {
         return $this->view('email')
-        ->subject('Email mới !')
+        ->subject('Email liên hệ !')
         ->from('taintp.testmail@gmail.com', 'Little & Little - Liên hệ')
         ->with('data',$this->data);
     }

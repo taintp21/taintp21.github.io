@@ -3,10 +3,10 @@
 @section('title') Liên hệ @endsection
 
 @section('content')
-<h1 class="text-white fw-bold text-center mb-5">LIÊN HỆ</h1>
+<h1 class="text-white fw-bold text-center mb-5 iCiel">LIÊN HỆ</h1>
 <div class="container">
     <div class="d-flex justify-content-center">
-        <div class="formGen p-2">
+        <div class="formGeneral p-2">
             <div class="p-3 content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac mollis justo. Etiam volutpat tellus quis risus volutpat, ut posuere ex facilisis.</p>
                 <form class="formLienHe" method="POST" action="{{route('send.email')}}">
@@ -28,7 +28,7 @@
                             <textarea cols="30" rows="10" class="form-control" name="message" placeholder="Lời nhắn" style="resize: none;"></textarea>
                         </div>
                         <div class="mb-3 text-center">
-                            <button class="btn fw-bold w-25" style="background: #FF000A; color: white;">Gửi liên hệ</button>
+                            <button class="btn w-50" style="background: #FF000A; color: white;"><h4 class="iCiel">Gửi liên hệ</h4></button>
                         </div>
                     </div>
 

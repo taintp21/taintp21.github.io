@@ -1,15 +1,25 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif!important;
+}
+@font-face {
+    font-family: iCiel;
+    src: url('/fonts/koni-black.ttf');
+}
+.iCiel{
+    font-family: iCiel;
 }
 body{
     background: url('/img/bg.png') no-repeat center, radial-gradient(97.91% 60.14% at 50% 50%, #FFDB7E 0%, #FF7A00 100%);
+    font-family: 'Montserrat', sans-serif!important;
+}
+label{
+    font-weight: bold;
 }
 .wrap{
     margin: 0 auto;
 }
-img{
+.event_content img{
     border-radius: 10px;
 }
 .navbar{
@@ -33,9 +43,9 @@ img{
     position: relative;
     right: 331.5px;
 }
-.active{
+.navbar-nav .active{
     border: 2px solid white;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 33px;
 }
 main{
@@ -43,13 +53,8 @@ main{
     background-repeat: no-repeat;
     box-shadow: 0px 4px 27px rgba(180, 106, 38, 0.25);
 }
-.formGen{
+.formGeneral{
     background-color: #FFF6D4;
-    border-radius: 20px;
-}
-.content{
-    height: 100%;
-    border: 3px dashed #FFB489;
     border-radius: 20px;
 }
 .event_content{
@@ -68,11 +73,53 @@ main{
     border-radius: 20px;
     width: 600px;
 }
-.formDatVe input, .formLienHe input, .formLienHe textarea{
+
+.formDatVe .title{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(176.02deg, #FF000A -12.67%, #C2000B 101.08%);
+}
+
+/* Thanh toán */
+.loaive{
+    position: relative;
+    top: -25px;
+    left: 30px;
+    width: fit-content;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(176.02deg, #FF000A -12.67%, #C2000B 101.08%);
+}
+
+.modal-header-error{
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 20px!important;
+    border-top-right-radius: 20px!important;
+    background: #FF8B15;
+}
+.modal-header-error .icon{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: -3.5em;
+}
+/**/
+
+.formDatVe input, .formLienHe input, .formLienHe textarea, .formThanhToan input{
     border: none;
     box-shadow: inset -1px 3px 3px rgba(179, 91, 11, 0.5);
     border-radius: 15px;
-    padding: 12px;
+    padding: 10px;
 }
 .form-control:focus{
     color: unset!important;
@@ -131,3 +178,60 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+.ui-datepicker-trigger {
+    background: #FFDE32;
+    border: none;
+    padding: 12px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+/*Carousel sự kiện */
+.carousel-item .card {
+    margin: 0 1em!important;
+    border: none!important;
+}
+.carousel-control-prev, .carousel-control-next {
+    background-color: #FFDE32!important;
+    width: 6vh!important;
+    height: 6vh!important;
+    top: 50%!important;
+    transform: translateY(-50%)!important;
+    opacity: 1!important;
+}
+.carousel-control-prev{
+    left: -5%!important;
+}
+.carousel-control-next{
+    right: -5%!important;
+}
+@media (min-width: 768px) {
+    .carousel-item {
+        margin-right: 0!important;
+        flex: 0 0 25%!important;
+        display: block!important;
+    }
+    .carousel-inner {
+        display: flex!important;
+    }
+}
+.card .img-wrapper {
+    max-width: 100%!important;
+    height: 13em!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+}
+.card img {
+    max-height: 100%!important;
+}
+@media (max-width: 767px) {
+    .card .img-wrapper {
+        height: 17em!important;
+    }
+}
+
+
