@@ -3,7 +3,7 @@
 @section('title') {{$chitiet_sukien->title}} @endsection
 
 @section('content')
-    <h1 class="text-white fw-bold text-center">{{$chitiet_sukien->title}}</h1>
+    <h1 class="text-white fw-bold text-center iCiel">{{$chitiet_sukien->title}}</h1>
     <div class="container mt-5" style="max-width: 1520px">
         <div class="formGen p-2">
             <div class="content p-3 d-flex">
