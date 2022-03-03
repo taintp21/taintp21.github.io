@@ -13,6 +13,7 @@ class sukien extends Model
     protected $table = 'event';
     protected $primaryKey = 'id';
     protected $fillable = [
+        'id',
         'images',
         'title',
         'location',

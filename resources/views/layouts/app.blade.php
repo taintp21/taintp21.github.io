@@ -33,8 +33,8 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/"><img src="{{ url('/img/logo.png') }}" width="229px" height="91px"></a>
                     <ul class="navbar-nav">
-                        <li class="nav-item {{ request()->segment(1) == '' ? 'active' : '' }}">
-                            <a class="nav-link" href="/">Trang chủ</a>
+                        <li class="nav-item {{ request()->segment(1) == 'trang-chu' ? 'active' : '' }}">
+                            <a class="nav-link" href="/trang-chu">Trang chủ</a>
                         </li>
                         <li class="nav-item {{ request()->segment(1) == 'su-kien' ? 'active' : '' }}">
                             <a class="nav-link" href="/su-kien">Sự kiện</a>

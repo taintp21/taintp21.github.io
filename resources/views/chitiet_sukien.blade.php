@@ -5,7 +5,7 @@
 @section('content')
     <h1 class="text-white fw-bold text-center iCiel">{{$chitiet_sukien->title}}</h1>
     <div class="container mt-5" style="max-width: 1520px">
-        <div class="formGen p-2">
+        <div class="formGeneral p-2">
             <div class="content p-3 d-flex">
                 <div style="margin-right: 40px;">
                     <p><img src="{{ url('/img/'. $chitiet_sukien->images) }}" alt="{{$chitiet_sukien->title}}" style="width: 411px; height: 337px"></p>

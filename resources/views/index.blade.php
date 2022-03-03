@@ -30,27 +30,28 @@
                 </ul>
             </div>
         </div>
-        <form class="formDatVe ms-5" method="GET" action="/form-thanhtoan">
-            @csrf
+        <form class="formDatVe ms-5" id="submitNextPage" method="GET" action="/form-thanhtoan">
             <h3 class="title iCiel">VÉ CỦA BẠN</h3>
+            @csrf
             <div class="row p-3">
+
                 <div class="col-10 mb-3">
-                    <input type="text" class="form-control" name="goi" placeholder="Gói" value="Gói gia đình" required>
+                    <input type="text" class="form-control" name="goi" id="goi" placeholder="Gói" value="Gói gia đình" required>
                 </div>
                 <div class="col-5 mb-3">
-                    <input type="number" class="form-control" name="soluong" placeholder="Số lượng vé" required>
+                    <input type="number" class="form-control" name="soluongdede" id="soluong" placeholder="Số lượng vé" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" required>
                 </div>
                 <div class="col-7 mb-3">
-                    <input type="text" class="form-control w-75" id="ngaysudung" name="ngaysudung" placeholder="Ngày sử dụng" style="display: inline-block;" required>
+                    <input type="text" class="form-control w-75" name="ngaysudung" id="ngaysudung" placeholder="Ngày sử dụng" onkeydown="return false;" style="display: inline-block;" required>
                 </div>
                 <div class="col-12 mb-3">
-                    <input type="text" class="form-control" name="hoten" placeholder="Họ và tên" required>
+                    <input type="text" class="form-control" name="hoten" id="hoten" placeholder="Họ và tên" required>
                 </div>
                 <div class="col-12 mb-3">
-                    <input type="number" class="form-control" name="dienthoai" placeholder="Số điện thoại" required>
+                    <input type="number" class="form-control" name="dienthoai" id="dienthoai" placeholder="Số điện thoại" required>
                 </div>
                 <div class="col-12 mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Địa chỉ email" required>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Địa chỉ email" required>
                 </div>
                 <div class="mb-3 text-center">
                     <button type="submit" class="btn fw-bold w-50 iCiel" style="background: #FF000A; color: white;">Đặt vé</button>
@@ -73,10 +74,20 @@
                 changeYear: true,
                 changeMonth: true,
                 showOn: 'both',
-                minDate: new Date(2022,0,1),
-                dateFormat: 'dd/mm/yy'
+                minDate: new Date(),
+                dateFormat: 'yy-mm-dd'
             });
             $(".ui-datepicker-trigger").html('<i class="fa-solid fa-calendar-days fa-lg"></i>');
+
+            //Session
+            $("#submitNextPage").submit(function(){
+                sessionStorage.setItem("goi", $("#goi").val());
+                sessionStorage.setItem("soluong", $("#soluong").val());
+                sessionStorage.setItem("ngaysudung", $("#ngaysudung").val());
+                sessionStorage.setItem("hoten", $("#hoten").val(),);
+                sessionStorage.setItem("dienthoai", $("#dienthoai").val());
+                sessionStorage.setItem("email", $("#email").val());
+            });
         });
     </script>
 @endsection
